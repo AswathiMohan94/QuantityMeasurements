@@ -105,4 +105,10 @@ public class QuantityTest {
         boolean equalsCheck = inch1.equals(inch2);
         Assert.assertFalse(equalsCheck);
     }
+    @Test // value check
+    public void givenInchValue_WhenEqual_ShouldReturnTrue() {
+        Length inch1 = new Length(Length.Unit.INCH,1.0);
+        Length inch2 = new Length(Length.Unit.INCH,1.0);
+        Assert.assertEquals(inch1, inch2);
+    }
 }
