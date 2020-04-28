@@ -143,5 +143,11 @@ public class QuantityTest {
         inch = Length.unitConverter(Length.Unit.INCH, 1.0);
         Assert.assertNotEquals(inch,feet,0.0);
     }
+    @Test
+    public void given1FeetAnd12Inch_Equal_ShouldReturnTrue() {
+        feet = Length.unitConverter(Length.Unit.FEET,1.0);
+        inch = Length.unitConverter(Length.Unit.INCH, 12.0);
+        Assert.assertEquals(feet,inch,0.0);
+    }
 
 }
