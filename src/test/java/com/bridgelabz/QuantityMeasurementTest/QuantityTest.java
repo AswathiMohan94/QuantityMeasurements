@@ -169,6 +169,12 @@ public class QuantityTest {
         yard = quantity.unitConverter(Quantity.Unit.YARD, 1.0);
         Assert.assertNotEquals(feet,yard,0.0);
     }
+    @Test
+    public void given1InchAnd1Yard_NotEqual_ShouldReturnFalse() {
+        inch = quantity.unitConverter(Quantity.Unit.INCH,1.0);
+        yard = quantity.unitConverter(Quantity.Unit.YARD, 1.0);
+        Assert.assertNotEquals(inch,yard,0.0);
+    }
 
 
 }
