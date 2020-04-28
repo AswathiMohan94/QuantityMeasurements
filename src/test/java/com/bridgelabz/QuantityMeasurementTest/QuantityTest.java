@@ -98,4 +98,11 @@ public class QuantityTest {
         Length feet2 = new Length(Length.Unit.FEET, 2.0);
         Assert.assertEquals(feet1, feet2);
     }
+    @Test
+    public void givenNullValueForInch_ShouldReturnFalse(){
+        Length inch1 = new Length(Length.Unit.INCH,1.0);
+        Length inch2 = null;
+        boolean equalsCheck = inch1.equals(inch2);
+        Assert.assertFalse(equalsCheck);
+    }
 }
