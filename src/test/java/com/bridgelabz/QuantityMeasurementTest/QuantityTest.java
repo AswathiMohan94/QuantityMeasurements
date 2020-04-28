@@ -92,4 +92,10 @@ public class QuantityTest {
         boolean typeCheck = feet1.equals(feet2);
         Assert.assertEquals(true, typeCheck);
     }
+    @Test
+    public void givenObjectRef_OfFeet_WhenEqual_ShouldReturnTrue() {
+        Length feet1 = new Length(Length.Unit.FEET, 2.0);
+        Length feet2 = new Length(Length.Unit.FEET, 2.0);
+        Assert.assertEquals(feet1, feet2);
+    }
 }
