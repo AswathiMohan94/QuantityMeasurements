@@ -118,4 +118,10 @@ public class QuantityTest {
         boolean typeCheck = inch1.equals(inch2);
         Assert.assertEquals(true, typeCheck);
     }
+    @Test
+    public void givenObjectRef_ForInch_WhenEqual_ShouldReturnTrue() {
+        Length inch1 = new Length(Length.Unit.INCH,1.0);
+        Length inch2 = new Length(Length.Unit.INCH,1.0);
+        Assert.assertEquals(inch1, inch2);
+    }
 }
