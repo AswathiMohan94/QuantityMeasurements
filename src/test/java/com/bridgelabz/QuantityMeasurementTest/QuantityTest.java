@@ -1,12 +1,19 @@
 package com.bridgelabz.QuantityMeasurementTest;
 
-import com.bridgelabz.QuantityMeasurement.Inch;
 import com.bridgelabz.QuantityMeasurements.Length;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 //import sun.security.util.Length;
 
 public class QuantityTest {
+    Length length;
+    double inch,feet,feet2;
+    @Before
+    public void setUp() throws Exception {
+        length = new Length();
+    }
+
     @Test
     public void given0FeetAnd0FeetShouldReturnEqual() {
         Length feet1 = new Length(Length.Unit.FEET,0.0);
@@ -123,5 +130,11 @@ public class QuantityTest {
         Length inch1 = new Length(Length.Unit.INCH,1.0);
         Length inch2 = new Length(Length.Unit.INCH,1.0);
         Assert.assertEquals(inch1, inch2);
+    }
+    @Test
+    public void given1FeetAnd1Inch_NotEqual_ShouldReturnFalse() {
+        inch = Length.unitConverter(Length.Unit.INCH,1.0);
+        feet = Length.unitConverter(Length.Unit.FEET, 1.0);
+        Assert.assertNotEquals(feet,inch,0.0);
     }
 }
