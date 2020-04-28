@@ -163,5 +163,12 @@ public class QuantityTest {
         yard = quantity.unitConverter(Quantity.Unit.YARD, 1.0);
         Assert.assertEquals(feet,yard,0.0);
     }
+    @Test
+    public void given1FeetAnd1Yard_NotEqual_ShouldReturnFalse() {
+        feet = quantity.unitConverter(Quantity.Unit.FEET,1.0);
+        yard = quantity.unitConverter(Quantity.Unit.YARD, 1.0);
+        Assert.assertNotEquals(feet,yard,0.0);
+    }
+
 
 }
