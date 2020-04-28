@@ -80,6 +80,11 @@ public class QuantityTest {
         boolean equalsCheck = feet1.equals(feet2);
         Assert.assertFalse(equalsCheck);
     }
-
+    @Test
+    public void givenFeetValue_WhenEqual_ShouldReturnTrue() {
+        Length feet1 = new Length(Length.Unit.FEET, 2.0);
+        Length feet2 = new Length(Length.Unit.FEET, 2.0);
+        Assert.assertEquals(feet1, feet2);
+    }
 
 }
