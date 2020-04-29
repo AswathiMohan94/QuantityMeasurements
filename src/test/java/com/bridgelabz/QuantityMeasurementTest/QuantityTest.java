@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class QuantityTest {
     Quantity quantity;
-    double cm1,cm2,inch, feet, cm, yard;
+    double inch,inch1,inch2, feet, cm, yard;
 
     @Before
     public void setUp() throws Exception {
@@ -220,6 +220,14 @@ public class QuantityTest {
         cm = quantity.unitConverter(Quantity.Unit.CENTIMETER, 5.0);
         Assert.assertEquals(inch, cm, 0.0);
 
-
     }
+//<<<<<<<<<<<<<<<<<<<<-----------ADDITION------------------>>>>>>>>>>>>>>>>>>>>>
+@Test
+    public void given2InchAnd2Inch_ShouldReturn4Inch() {
+        inch1 = quantity.unitConverter(Quantity.Unit.INCH, 2.0);
+        inch2 = quantity.unitConverter(Quantity.Unit.INCH, 2.0);
+        inch=inch1+inch2;
+        Assert.assertEquals(4,inch, 0.0);
+
+}
 }
