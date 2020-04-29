@@ -11,7 +11,7 @@ public class Quantity {
     }
 
     public enum Unit {
-        FEET(1 * 12.0), INCH(1.0),YARD(3*12.0); //taking based on inch 1 inch=1 inch, 1 feet=1*12 inch
+        FEET(1 * 12.0), INCH(1.0),YARD(3*12.0),CENTIMETER(1/2.5); //taking based on inch 1 inch=1 inch, 1 feet=1*12 inch
         public double type;
 
         Unit(double type) {

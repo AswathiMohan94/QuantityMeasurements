@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.QuantityMeasurementTest.QuantityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-28T20:53:38" hostname="Achu" time="0.005">
+<testsuite name="com.bridgelabz.QuantityMeasurementTest.QuantityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-29T03:10:25" hostname="Achu" time="0.003">
   <properties/>
-  <testcase name="given3FeetAnd1Yard_Equal_ShouldReturnTrue" classname="com.bridgelabz.QuantityMeasurementTest.QuantityTest" time="0.005"/>
+  <testcase name="given2InchAnd5cm_Equal_ShouldReturnTrue" classname="com.bridgelabz.QuantityMeasurementTest.QuantityTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
