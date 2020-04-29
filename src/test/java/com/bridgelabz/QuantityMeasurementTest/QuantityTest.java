@@ -246,4 +246,11 @@ public class QuantityTest {
         inch = feet2 + feet1;
         Assert.assertEquals(24, inch, 0.0);
     }
+    @Test
+    public void given2inchAnd2cm_WhenAdded_ShouldReturn3Inch() {
+        inch1 = quantity.unitConverter(Quantity.Unit.INCH, 2.0);
+        cm = quantity.unitConverter(Quantity.Unit.CENTIMETER, 2.5);
+        inch = cm + inch1;
+        Assert.assertEquals(3, inch, 0.0);
+    }
 }
