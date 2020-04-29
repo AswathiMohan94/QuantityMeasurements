@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class QuantityTest {
     Quantity quantity;
-    double inch, feet, cm, yard;
+    double cm1,cm2,inch, feet, cm, yard;
 
     @Before
     public void setUp() throws Exception {
@@ -212,6 +212,7 @@ public class QuantityTest {
         Assert.assertEquals(yard, feet, 0.0);
 
     }
+   // <<<<<<<<<<<<<<<<<--------------CENTIMETER ----------->>>>>>>>>>>>>>>>>>
 
     @Test
     public void given2InchAnd5cm_Equal_ShouldReturnTrue() {
