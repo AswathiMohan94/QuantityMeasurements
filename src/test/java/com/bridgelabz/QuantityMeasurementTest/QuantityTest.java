@@ -194,5 +194,4 @@ public class QuantityTest {
         Assert.assertEquals(yard,feet,0.0);
     }
 
-
 }
