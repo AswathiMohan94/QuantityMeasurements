@@ -181,6 +181,12 @@ public class QuantityTest {
         inch = quantity.unitConverter(Quantity.Unit.INCH,36.0);
         Assert.assertEquals(yard,inch,0.0);
     }
+    @Test
+    public void given136InchAndYard_Equal_ShouldReturnTrue() {
+        yard = quantity.unitConverter(Quantity.Unit.YARD, 1.0);
+        inch = quantity.unitConverter(Quantity.Unit.INCH,36.0);
+        Assert.assertEquals(inch,yard,0.0);
+    }
 
 
 }
