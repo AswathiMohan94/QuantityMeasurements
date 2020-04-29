@@ -1,40 +1,28 @@
 package com.bridgelabz.QuantityMeasurements;
+import com.bridgelabz.QuantityMeasurements.Unit;
 
 public class Quantity {
-
-
-     double FEET_TO_INCH = 12.0;
+    private static final double FEET_TO_INCH =12.0 ;
     public Unit unit;
-
-    public Quantity() {
-
-    }
-
-    public enum Unit {
-        FEET(1 * 12.0), INCH(1.0),YARD(3*12.0),CENTIMETER(1/2.5),
-        GALLON(3.78),LITRE(1.0),MILLILITRE(1/1000); //taking based on inch 1 inch=1 inch, 1 feet=1*12 inch
-        public double type;
-
-        Unit(double type) {
-            this.type = type;
-        }
-
-        public double getType() {
-
-            return type;
-        }
-    }
-
     public double value;
-
-    public static double unitConverter(Unit unit, double value) {
-        return value * unit.getType();
-    }
 
     public Quantity(Unit unit, double value) {
         this.unit = unit;
         this.value = value;
     }
+    public double Addition(Quantity value){
+        double value1=this.unit.getEnumValue()*this.value;
+        double value2=this.unit.getEnumValue()*this.value;
+        return value1+value2;
+
+    }
+
+
+
+    public static double unitConverter(Unit unit, double value) {
+        return value * unit.getEnumValue();
+    }
+
 
     public boolean compare(Quantity that) {
         if (this.unit.equals(Unit.FEET) && that.unit.equals(Unit.FEET))
