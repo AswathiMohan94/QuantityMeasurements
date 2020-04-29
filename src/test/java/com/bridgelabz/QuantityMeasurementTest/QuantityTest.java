@@ -222,12 +222,18 @@ public class QuantityTest {
 
     }
 //<<<<<<<<<<<<<<<<<<<<-----------ADDITION------------------>>>>>>>>>>>>>>>>>>>>>
-@Test
+    @Test
     public void given2InchAnd2Inch_ShouldReturn4Inch() {
         inch1 = quantity.unitConverter(Quantity.Unit.INCH, 2.0);
         inch2 = quantity.unitConverter(Quantity.Unit.INCH, 2.0);
         inch=inch1+inch2;
         Assert.assertEquals(4,inch, 0.0);
-
-}
-}
+    }
+    @Test
+    public void given1feetAnd2Inch_ShouldReturn14Inch() {
+        feet = quantity.unitConverter(Quantity.Unit.FEET, 1.0);
+        inch1 = quantity.unitConverter(Quantity.Unit.INCH, 2.0);
+        inch = inch1 + feet;
+        Assert.assertEquals(14, inch, 0.0);
+    }
+    }
