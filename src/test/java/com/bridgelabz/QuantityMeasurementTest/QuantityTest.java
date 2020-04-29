@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class QuantityTest {
     Quantity quantity;
-    double inch,inch1,inch2, feet, cm, yard,feet1,feet2;
+    double inch,inch1,inch2, feet, cm, yard,feet1,feet2,litre,gallon,volume;
     @Before
     public void setUp() throws Exception {
         quantity = new Quantity();
@@ -263,6 +263,14 @@ public class QuantityTest {
         inch1 = quantity.unitConverter(Quantity.Unit.INCH, 2.0);
         cm = quantity.unitConverter(Quantity.Unit.CENTIMETER, 2.5);
         inch = cm + inch1;
+
         Assert.assertEquals(3, inch, 0.0);
+    }
+//<<<<<<<<<<<<<<<<<<<<<---------------GALLON & LITRE------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void given1GallonAnd3L_ifEqual_ShouldReturnTrue() {
+        gallon = quantity.unitConverter(Quantity.Unit.GALLON, 1.0);
+        litre = quantity.unitConverter(Quantity.Unit.LITRE, 3.78);
+        Assert.assertEquals(gallon, litre, 0.0);
     }
 }

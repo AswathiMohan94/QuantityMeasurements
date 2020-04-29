@@ -2,8 +2,8 @@ package com.bridgelabz.QuantityMeasurements;
 
 public class Quantity {
 
-    double FEET_TO_INCH;
-    //  private static final double FEET_TO_INCH = 12.0;
+
+     double FEET_TO_INCH = 12.0;
     public Unit unit;
 
     public Quantity() {
@@ -11,7 +11,8 @@ public class Quantity {
     }
 
     public enum Unit {
-        FEET(1 * 12.0), INCH(1.0),YARD(3*12.0),CENTIMETER(1/2.5); //taking based on inch 1 inch=1 inch, 1 feet=1*12 inch
+        FEET(1 * 12.0), INCH(1.0),YARD(3*12.0),CENTIMETER(1/2.5),
+        GALLON(3.78),LITRE(1.0),MILLILITRE(1/1000); //taking based on inch 1 inch=1 inch, 1 feet=1*12 inch
         public double type;
 
         Unit(double type) {
