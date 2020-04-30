@@ -253,5 +253,13 @@ public class QuantityTest {
         boolean compareCheck=gallon.Compare(litre);
         Assert.assertTrue(compareCheck);
     }
+    @Test
+
+    public void given1GLAnd1000ml_ifEqual_ShouldReturnTrue() {
+        Quantity litre = new Quantity(Unit.LITRE, 1.0);
+        Quantity millilitre = new Quantity(Unit.MILLILITRE, 1000.0);
+        boolean compareCheck=litre.Compare(millilitre);
+        Assert.assertTrue(compareCheck);
+    }
 
 }
