@@ -277,5 +277,16 @@ public class QuantityTest {
         double sum =litre.addition(millilitre);
         Assert.assertEquals(2.0,sum,0.0);
     }
+    //<<<<<<<<<<<<<<<<-----------------------GRAMS--------------------->>>>>>>>>>>>>>>>>
+
+    @Test
+
+    public void given1KGAnd1000g_ifEqual_ShouldReturnTrue() {
+        Quantity kilogram = new Quantity(Unit.KILOGRAM, 1.0);
+        Quantity gram = new Quantity(Unit.GRAM, 1000.0);
+        boolean compareCheck =kilogram.Compare(gram);
+        Assert.assertTrue(compareCheck);
+    }
+
 
 }
