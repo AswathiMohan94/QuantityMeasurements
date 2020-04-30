@@ -269,5 +269,13 @@ public class QuantityTest {
         double sum =litre.addition(gallon);
         Assert.assertEquals(7.56,sum,0.0);
     }
+    @Test
+
+    public void given1LAnd1000ml_ifAdded_ShouldReturn2() {
+        Quantity litre = new Quantity(Unit.LITRE, 1.0);
+        Quantity millilitre = new Quantity(Unit.MILLILITRE, 1000.0);
+        double sum =litre.addition(millilitre);
+        Assert.assertEquals(2.0,sum,0.0);
+    }
 
 }
