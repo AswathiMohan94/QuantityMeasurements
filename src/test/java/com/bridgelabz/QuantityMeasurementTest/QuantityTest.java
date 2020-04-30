@@ -261,5 +261,13 @@ public class QuantityTest {
         boolean compareCheck=litre.Compare(millilitre);
         Assert.assertTrue(compareCheck);
     }
+    @Test
+
+    public void given1GLAnd3L_ifAdded_ShouldReturn7() {
+        Quantity gallon = new Quantity(Unit.GALLON, 1.0);
+        Quantity litre = new Quantity(Unit.LITRE, 3.78);
+        double sum =litre.addition(gallon);
+        Assert.assertEquals(7.56,sum,0.0);
+    }
 
 }
