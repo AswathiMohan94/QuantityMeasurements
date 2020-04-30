@@ -1,33 +1,30 @@
 package com.bridgelabz.QuantityMeasurements;
 
 public class Quantity {
-
-
-    double FEET_TO_INCH = 12.0;
-    public Unit unit;
-
-
-
+    public ConversionOfUnits.ConversionOfUnitEnum unit;
     public double value;
 
-    public static double unitConverter(Unit unit, double value) {
-        return value * unit.getEnumValue();
-    }
-
-    public Quantity(Unit unit, double value) {
+    public Quantity(ConversionOfUnits.ConversionOfUnitEnum unit, double value) {
         this.unit = unit;
         this.value = value;
     }
-    public double addition(Quantity value)
-    {
-        double value1=this.unit.getEnumValue()*this.value;
-        double value2=this.unit.getEnumValue()*this.value;
-        return value1+value2;
+    public double addition(Quantity that) throws QuantityException {
+        if (this.unit.equals(that.unit)) {
+            double convert1 = this.unit.convertToUnits( this.value);
+            double convert2 = this.unit.convertToUnits(this.value);
+            return convert1 + convert2;
+        }else
+
+            throw new QuantityException("wrong unit", QuantityException.ExceptionType.INVALID_UNIT);
     }
-    public boolean Compare(Quantity value){
-        double value1=this.unit.getEnumValue()*this.value;
-        double value2=this.unit.getEnumValue()*this.value;
-        return (Double.compare(value1, value2) == 0);
+    public boolean Compare(Quantity that) throws QuantityException {
+        if(this.unit.equals(that.unit)) {
+            double value1 = this.unit.convertToUnits(this.value);
+            double value2 = this.unit.convertToUnits(this.value);
+            return (Double.compare(value1, value2) == 0);
+       }
+        else
+            throw new QuantityException("wrong unit",QuantityException.ExceptionType.INVALID_UNIT);
 
     }
     @Override
