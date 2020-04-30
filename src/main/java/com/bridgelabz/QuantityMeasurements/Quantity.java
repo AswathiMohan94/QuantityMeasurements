@@ -28,16 +28,8 @@ public class Quantity {
         double value1=this.unit.getEnumValue()*this.value;
         double value2=this.unit.getEnumValue()*this.value;
         return (Double.compare(value1, value2) == 0);
+
     }
-
-  /*  public boolean compare(Quantity that) {
-        if (this.unit.equals(Unit.FEET) && that.unit.equals(Unit.FEET))
-            return Double.compare(this.value, that.value) == 0;
-        if (this.unit.equals(Unit.FEET) && that.unit.equals(Unit.INCH))
-            return Double.compare(this.value * FEET_TO_INCH, that.value) == 0;
-        return false;
-    }*/
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

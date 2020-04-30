@@ -287,6 +287,23 @@ public class QuantityTest {
         boolean compareCheck =kilogram.Compare(gram);
         Assert.assertTrue(compareCheck);
     }
+    @Test
+
+    public void given1tonneAnd1000g_ifAdded_ShouldReturn1001Kg() {
+        Quantity tonne = new Quantity(Unit.TONNE, 1.0);
+        Quantity gram = new Quantity(Unit.GRAM, 1000.0);
+        double sum =tonne.addition(gram);
+        Assert.assertEquals(1001,sum,0.0);
+    }
+    @Test
+
+    public void given212FahrenheitAnd100DegreeCelcius_ifEqual_ShouldReturnTrue() {
+        Quantity fahrenheit = new Quantity(Unit.FARENHEIT, 1.0);
+        Quantity celsius = new Quantity(Unit.CELCIUS, 1000.0);
+        boolean compareCheck =fahrenheit.Compare(celsius);
+        Assert.assertTrue(compareCheck);
+    }
+
 
 
 }
